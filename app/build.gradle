@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.honorguard'
-    compileSdk 35
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.honorguard"
         minSdk 31          // Android 12 minimum (Honor 200 ships with 12+)
-        targetSdk 35
+        targetSdk 34
         versionCode 1
         versionName "1.0.0"
     }
