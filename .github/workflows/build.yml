@@ -25,12 +25,12 @@ jobs:
           unzip -q /tmp/gradle.zip -d /opt
           echo "/opt/gradle-8.7/bin" >> $GITHUB_PATH
 
-      - name: Fix styles.xml
+     - name: Fix styles.xml
         run: |
           cat > app/src/main/res/values/styles.xml << 'EOF'
           <?xml version="1.0" encoding="utf-8"?>
           <resources>
-              <style name="Theme.HonorGuard" parent="Theme.Material3.DayNight.NoActionBar">
+              <style name="Theme.HonorGuard" parent="Theme.AppCompat.DayNight.NoActionBar">
                   <item name="android:statusBarColor">@android:color/transparent</item>
                   <item name="android:navigationBarColor">@android:color/transparent</item>
                   <item name="android:windowLightStatusBar">false</item>
