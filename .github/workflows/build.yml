@@ -26,7 +26,7 @@ jobs:
           echo "/opt/gradle-8.7/bin" >> $GITHUB_PATH
 
      - name: Fix styles.xml
-        run: |
+       run: |
           cat > app/src/main/res/values/styles.xml << 'EOF'
           <?xml version="1.0" encoding="utf-8"?>
           <resources>
