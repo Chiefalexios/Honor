@@ -135,7 +135,27 @@ class CallRecordingService : Service() {
         when (intent?.action) {
             ACTION_START -> {
                 val number = intent.getStringExtra("number") ?: "unknown"
-                startRecording(number)
+                private fun startRecording(number: String) {
+    if (_isRecording.value) return
+
+    val file = createOutputFile(number)
+    outputPath = file.absolutePath
+
+    // ── Speaker routing trick ──────────────────────────────────────
+    // On MagicOS/Qualcomm, force speakerphone ON so caller's voice
+    // plays through speaker and MIC picks up both sides.
+    val audioManager = getSystemService(android.media.AudioManager::class.java)
+    audioManager?.apply {
+        mode = android.media.AudioManager.MODE_IN_COMMUNICATION
+        isSpeakerphoneOn = true
+    }
+
+    // Small delay to let speaker routing settle before recording starts
+    Thread.sleep(300)
+
+    // Now MIC will capture both your voice and caller's voice from speaker
+    trySingleMicRecord(file)
+}
             }
             ACTION_STOP -> stopRecordingAndSave()
         }
