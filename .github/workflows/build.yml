@@ -19,11 +19,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Install Gradle 8.2
+      - name: Install Gradle 8.7
         run: |
-          wget -q https://services.gradle.org/distributions/gradle-8.2-bin.zip -O /tmp/gradle.zip
+          wget -q https://services.gradle.org/distributions/gradle-8.7-bin.zip -O /tmp/gradle.zip
           unzip -q /tmp/gradle.zip -d /opt
-          echo "/opt/gradle-8.2/bin" >> $GITHUB_PATH
+          echo "/opt/gradle-8.7/bin" >> $GITHUB_PATH
 
       - name: Build Debug APK
         run: gradle assembleDebug --stacktrace
