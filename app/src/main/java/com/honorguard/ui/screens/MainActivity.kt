@@ -364,7 +364,7 @@ fun DialpadScreen(viewModel: GuardViewModel) {
                 onClick = { viewModel.deleteDigit() },
                 modifier = Modifier.size(56.dp)
             ) {
-                Icon(Icons.Default.BackspaceOutlined, "Delete",
+                Icon(Icons.Default.Backspace, "Delete",
                     tint = GuardColors.Steel, modifier = Modifier.size(24.dp))
             }
 
