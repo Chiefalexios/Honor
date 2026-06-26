@@ -6,10 +6,5 @@
         <item name="android:windowLightStatusBar">false</item>
     </style>
 
-    <style name="Theme.HonorGuard.InCall" parent="Theme.HonorGuard">
-        <item name="android:windowShowWhenLocked">true</item>
-        <item name="android:windowTurnScreenOn">true</item>
-        <item name="android:windowKeepScreenOn">true</item>
-        <item name="android:windowDismissKeyguard">true</item>
-    </style>
+    <style name="Theme.HonorGuard.InCall" parent="Theme.HonorGuard" />
 </resources>
