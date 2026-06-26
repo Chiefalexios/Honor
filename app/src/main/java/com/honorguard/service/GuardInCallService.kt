@@ -127,10 +127,10 @@ class GuardInCallService : InCallService() {
         _activeCall.value?.unhold()
     }
 
-    fun toggleMute() {
-        val current = isMuted
-        setMuted(!current)
-    }
+ fun toggleMute() {
+    val current = callAudioState?.isMuted ?: false
+    setMuted(!current)
+}
 
     fun setSpeaker(on: Boolean) {
         val route = if (on) android.telecom.CallAudioState.ROUTE_SPEAKER
