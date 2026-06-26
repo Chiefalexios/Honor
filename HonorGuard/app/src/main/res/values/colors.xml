@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#0B1120</color>
+    <color name="navy_deep">#0B1120</color>
+    <color name="navy_card">#131C2E</color>
+    <color name="blue_accent">#3D8EFF</color>
+    <color name="guard_green">#2ECC71</color>
+    <color name="guard_red">#E84040</color>
+    <color name="guard_amber">#F5A623</color>
+</resources>

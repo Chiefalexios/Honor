@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HonorGuard</string>
+    <string name="incoming_call">Incoming Call</string>
+    <string name="spam_detected">Spam Detected</string>
+    <string name="fraud_warning">Likely Fraud</string>
+    <string name="recording_active">Recording</string>
+    <string name="answer">Answer</string>
+    <string name="decline">Decline</string>
+    <string name="end_call">End Call</string>
+</resources>
